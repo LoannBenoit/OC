@@ -1,11 +1,5 @@
-<p>
-    Cette page ne contient que du HTML.<br />
-    Veuillez taper votre prénom :
-</p>
-
-<form action="cible.php" method="post">
-<p>
-    <input type="text" name="prenom" placeholder="Votre prénom" required/>
-    <input type="submit" value="Valider" />
-</p>
+<form action="cible_envoi.php" method="post" enctype="multipart/form-data">
+    <p>Formulaire d'envoi de fichier</p>
+    <input type="file" name="monfichier">
+    <input type="submit" value="Envoyer le fichier">
 </form>
