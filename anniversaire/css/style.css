@@ -1,0 +1,20 @@
+html,body {
+  height: 100%;
+  margin: 0px;
+}
+
+.fond {
+  position: absolute;
+  height: 100%;
+  background: teal;
+}
+
+.content {
+  position: relative;
+  height: 100%;
+  background: darkcyan;
+}
+
+.first {
+  position: relative;
+}
