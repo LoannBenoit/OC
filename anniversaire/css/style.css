@@ -4,17 +4,24 @@ html,body {
 }
 
 .fond {
-  position: absolute;
+  position: relative;
   height: 100%;
-  background: teal;
+  background-image:linear-gradient(60deg, #b005b3, #0892ff);
 }
 
 .content {
   position: relative;
   height: 100%;
-  background: darkcyan;
+  
 }
 
 .first {
-  position: relative;
+  position: absolute;
+  height: 50px;
+  border: 2px solid black;
+  background: white;
+  border-radius: 3px;
+  margin: 0 auto;
+  color: black;
+
 }
