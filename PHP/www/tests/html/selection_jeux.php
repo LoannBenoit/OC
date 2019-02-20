@@ -11,15 +11,12 @@ try {
 // Si tout va bien, on peut continuer
 
 // récupération du contenu de la table jeux_video
-$reponse = $bdd->query('SELECT nom, prix FROM jeux_video') or die(print_r($bdd->errorInfo()));
-$reponse->execute(array($_GET['posesseur'], $_GET['prix_max']));
+$reponse = $bdd->query('SELECT COUNT(nom) AS nb_jeux, possesseur FROM jeux_video GROUP BY possesseur') or die(print_r($bdd->errorInfo()));
 
-echo '<ul>';
 // Boucle pour chaque entrée
 while ($donnees = $reponse->fetch()) {
-    echo '<li>' . $donnees['nom'] . ' (' . $donnees['prix'] . ' EUR)</li>';
+    echo $donnees['nb_jeux'] . ' - ' . $donnees['possesseur'] . '<br>';
 }
-echo '</ul>';
 
 $reponse->closeCursor(); // Termine le traitement de la requête
 
