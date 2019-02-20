@@ -12,16 +12,19 @@ html,body {
 .content {
   position: relative;
   height: 100%;
-  
 }
 
 .first {
   position: absolute;
-  height: 50px;
+  height: 70px;
   border: 2px solid black;
   background: white;
   border-radius: 3px;
   margin: 0 auto;
   color: black;
-
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 18px;
+  margin-top: 50px;
 }
