@@ -3,6 +3,10 @@ html,body {
   margin: 0px;
 }
 
+div:hover {
+  cursor: pointer;
+}
+
 .fond {
   position: relative;
   height: 100%;
@@ -17,7 +21,7 @@ html,body {
 .first {
   position: absolute;
   height: 70px;
-  border: 2px solid black;
+  border: 4px solid black;
   background: white;
   border-radius: 3px;
   margin: 0 auto;
@@ -28,3 +32,21 @@ html,body {
   padding-top: 18px;
   margin-top: 50px;
 }
+
+.click_me {
+  padding: 3px;
+  margin: 5px;
+  border-radius: 3px;
+  font-size: 0.7em;
+  background-color: #ccffcc;
+}
+
+.div_secondaires {
+  height : 45px;
+  border : 2px solid black;
+  border-radius: 3px;
+  margin: 0px auto;
+  margin-top : 50px;
+  color : white; 
+  padding-top : 8px;
+  text-align : center }
