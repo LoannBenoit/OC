@@ -1,13 +1,17 @@
 $(document).ready(function() {
 
 var div2 = $('#second');
-  div2.css({'background-color':'#fd78f7'});
+  div2.css({'background-color':'rgb(255, 107, 174)'});
 
 var div3 = $('#third');
-  div3.css({'background-color':'#28a3cc'});
+  div3.css({'background-color':'rgb(101, 197, 251)'});
 
 var div4 = $('#fourth');
-  div4.css({'background-color':'#ffb545'});
+  div4.css({'background-color':'rgb(255, 172, 122)'});
+
+var audio = $('audio')[0];
+
+var background = $('.container-fluid');
 
 // Adding the event fot the first div on the click
 $('.first').on('click', function(e){
@@ -28,6 +32,8 @@ div3.on('click', function(e){
     // And the last event on click on the last div
     div4.on('click', function(e){
       $('#second, #third, #fourth').text('HAPPY BIRTHDAY !');
+      audio.play();
+      background.css({'background-image':'url("images/hp.jpeg")'});
     });
     
 });
