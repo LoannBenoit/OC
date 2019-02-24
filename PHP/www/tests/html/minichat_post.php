@@ -4,6 +4,7 @@ header('Location: minichat.php');
 // Récupération des input du minichat dans des variables
 $pseudo = htmlspecialchars($_POST['pseudo']);
 $message = htmlspecialchars($_POST['message']);
+$date_post = new Datetime();
 setcookie('pseudo', $pseudo, time() + 365*24*3600, null, null, false, true);
 
 try {
@@ -15,10 +16,11 @@ try {
 }
 
 
-$req = $bdd->prepare('INSERT INTO minichat(pseudo, message) VALUES(:pseudo, :message)');
+$req = $bdd->prepare('INSERT INTO minichat(pseudo, message, date) VALUES(:pseudo, :message, :date)');
 $req->execute(array(
 	'pseudo' => $pseudo,
   'message' => $message,
+  'date' => $date_post
 	));
 
 ?>
