@@ -15,4 +15,31 @@ html, body {
     background: linear-gradient(127deg, #b639d2, rgba(0,255,0,0) 70.71%),
     linear-gradient(336deg, #fdaf00, rgba(0,0,255,0) 70.71%),
     linear-gradient(200deg, #f41d4e, rgba(255, 0, 0, 0) 70.71%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
   }
+
+  .chatzone {
+    margin: 150px auto;
+    
+    border-radius: 10px;
+    padding: 30px;
+    width: 90%;
+    background: rgba(255, 255, 255, 0.178);
+    /* background: linear-gradient(200deg, #f41d4e70, rgba(255, 0, 0, 0) 70.71%),
+                linear-gradient(127deg, #b639d273, rgba(0,255,0,0) 70.71%),
+                linear-gradient(336deg, #fdaf0073, rgba(0,0,255,0) 70.71%); */
+  }
+
+  #pseudo, #message {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.719);
+     border: #b639d2;
+  }
+
+  #submit {
+      background: #00c853;
+  }
+
