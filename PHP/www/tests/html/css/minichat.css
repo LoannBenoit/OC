@@ -28,7 +28,9 @@ html, body {
   .chat {
       width: 70%;
       height: 90vh;
-      margin: 50px auto;
+      margin: 0px auto;
+      position: relative;
+      top: 5%;
       background: rgba(0, 0, 0, 0.31);
       padding: 30px;
       border-radius: 5px;
