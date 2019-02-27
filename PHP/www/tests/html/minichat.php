@@ -24,7 +24,7 @@
               die('Erreur : ' . $e->getMessage());
             }
 
-            $reponse = $bdd->query('SELECT pseudo, message, DATE_FORMAT(date, \' | %d/%m/%Y | %H : %i : %s | \') AS date_form FROM minichat ORDER BY id') or die(print_r($bdd->errorInfo()));
+            $reponse = $bdd->query('SELECT pseudo, message, DATE_FORMAT(date, \' | %d/%m/%Y | %H:%i | \') AS date_form FROM minichat ORDER BY id') or die(print_r($bdd->errorInfo()));
         
             while ($donnees = $reponse->fetch()) {
               echo '<div class="dateElt">' . $donnees['date_form'] . '</div>' . '<div class="messageElt">' . '<strong>' . $donnees['pseudo'] . '</strong>' . ' : ' . $donnees['message'] . '</div>' . '<br>';
@@ -35,8 +35,8 @@
         <div class="formzone">
           <form  id="chat_form" autocomplete="off" action="minichat_post.php" method="post">
             <input type="text" name="pseudo" id="pseudo" placeholder="Votre pseudo" value="<?php echo $_COOKIE['pseudo'];?>" required><?php ?>
-            <textarea class="materialize-textarea" name="message" id="message" placeholder="Votre message"></textarea>
-            <button id="submit" class="btn waves-effect waves-light right" type="submit" name="action">Send</button>
+            <textarea class="materialize-textarea" name="message" id="message" placeholder="Votre message" required></textarea>
+            <button id="submit" class="btn waves-effect waves-light right" type="submit" name="action"><i class="material-icons send">send</i></button>
           </form>
         </div>
 
