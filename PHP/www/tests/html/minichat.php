@@ -36,7 +36,7 @@
           <form  autocomplete="off" action="minichat_post.php" method="post">
             
               <input type="text" name="pseudo" id="pseudo" placeholder="Votre pseudo" value="<?php echo $_COOKIE['pseudo'];?>" required><?php ?>
-              <textarea class="materialize-textarea" name="message" id="message" placeholder="Votre message"></textarea>
+              <textarea class="materialize-textarea" name="message" id="message" placeholder="Votre message" required></textarea>
               <button id="submit" class="btn waves-effect waves-light right" type="submit" name="action">Send</button>
           </form>
         </div>

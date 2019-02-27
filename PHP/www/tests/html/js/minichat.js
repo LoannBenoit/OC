@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $(".chatzone").animate({ scrollTop: $('.chatzone').prop("scrollHeight")}, 400);
+$('.chatzone').scrollTop($('.chatzone')[0].scrollHeight);
     $('#message').val('');
     M.textareaAutoResize($('#message'));
   });
