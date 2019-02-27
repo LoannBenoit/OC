@@ -33,18 +33,10 @@
         </div>
 
         <div class="formzone">
-<<<<<<< HEAD
           <form  id="chat_form" autocomplete="off" action="minichat_post.php" method="post">
             <input type="text" name="pseudo" id="pseudo" placeholder="Votre pseudo" value="<?php echo $_COOKIE['pseudo'];?>" required><?php ?>
             <textarea class="materialize-textarea" name="message" id="message" placeholder="Votre message"></textarea>
             <button id="submit" class="btn waves-effect waves-light right" type="submit" name="action">Send</button>
-=======
-          <form  autocomplete="off" action="minichat_post.php" method="post">
-            
-              <input type="text" name="pseudo" id="pseudo" placeholder="Votre pseudo" value="<?php echo $_COOKIE['pseudo'];?>" required><?php ?>
-              <textarea class="materialize-textarea" name="message" id="message" placeholder="Votre message" required></textarea>
-              <button id="submit" class="btn waves-effect waves-light right" type="submit" name="action">Send</button>
->>>>>>> bc6c93292654c55de0e1a21c0a812addd0786c39
           </form>
         </div>
 

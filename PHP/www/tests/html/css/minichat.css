@@ -42,14 +42,9 @@ html, body {
     border-radius: 5px 5px 0px 0px;
     padding: 15px;
     width: 100%;
-<<<<<<< HEAD
     height: 72vh;
     background: #19191999;
     
-=======
-    height: 65vh;
-    background: rgba(59, 59, 59, 0.178);
->>>>>>> bc6c93292654c55de0e1a21c0a812addd0786c39
     /* background: linear-gradient(200deg, #f41d4e70, rgba(255, 0, 0, 0) 70.71%),
                 linear-gradient(127deg, #b639d273, rgba(0,255,0,0) 70.71%),
                 linear-gradient(336deg, #fdaf0073, rgba(0,0,255,0) 70.71%); */
