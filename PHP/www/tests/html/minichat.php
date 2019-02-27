@@ -33,7 +33,6 @@
         </div>
 
         <div class="formzone">
-
           <form  id="chat_form" autocomplete="off" action="minichat_post.php" method="post">
             <input type="text" name="pseudo" id="pseudo" placeholder="Votre pseudo" value="<?php echo $_COOKIE['pseudo'];?>" required><?php ?>
             <textarea class="materialize-textarea" name="message" id="message" placeholder="Votre message"></textarea>
