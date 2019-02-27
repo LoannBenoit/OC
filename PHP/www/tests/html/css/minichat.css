@@ -7,7 +7,6 @@ html, body {
     height: 100%;
 }
 
-
 .background {
     width: 100%;
     height: 100%;
@@ -21,11 +20,18 @@ html, body {
     align-items: center;
   }
 
+  .container {
+    width: 70%;
+    height: 100vh;
+}
+
   .chat {
       width: 70%;
+      height: 90vh;
       margin: 50px auto;
-      background: rgba(255, 255, 255, 0.178);
+      background: rgba(0, 0, 0, 0.31);
       padding: 30px;
+      border-radius: 5px;
   }
 
   .chatzone {
@@ -36,8 +42,9 @@ html, body {
     border-radius: 5px 5px 0px 0px;
     padding: 15px;
     width: 100%;
-    height: 600px;
-    background: rgba(59, 59, 59, 0.178);
+    height: 72vh;
+    background: #19191999;
+    
     /* background: linear-gradient(200deg, #f41d4e70, rgba(255, 0, 0, 0) 70.71%),
                 linear-gradient(127deg, #b639d273, rgba(0,255,0,0) 70.71%),
                 linear-gradient(336deg, #fdaf0073, rgba(0,0,255,0) 70.71%); */
@@ -49,16 +56,17 @@ html, body {
 
   .formzone {
       width: 100%;
+      height: auto;
       margin: 0px auto;
-      background: rgba(59, 59, 59, 0.178);
+      background: #19191999;
       padding: 15px;
       box-shadow: 0px -10px 80px -35px rgba(0,0,0,0.6);
       border-radius: 0px 0px 5px 5px;
   }
 
   .dateElt {
-      color: rgb(109, 12, 121);
-      border-top: 0.1px solid rgb(109, 12, 121);
+      color: rgb(155, 64, 167);
+      border-top: 1px solid rgba(182, 57, 210, 0.22);
       padding-top: 20px;
   }
 
@@ -102,7 +110,7 @@ html, body {
       box-shadow: 0 1px 0 0 #B4166F;
   }
 
-  #message::placeholder{
+  #pseudo::placeholder, #message::placeholder{
       color: #fcf0ff;
   }
 

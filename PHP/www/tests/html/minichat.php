@@ -13,35 +13,35 @@
 <body>
   <div class="background">
     <div class="container">
-    <div class="chat">
-      <div class="chatzone">
-    
-        <?php
-          try {
-            // Connection MySQL
-            $bdd = new PDO('mysql:host=localhost;dbname=test;charset=utf8', 'root', 'root');
-          } catch (Exception $e) {
-            // En cas d'erreur, on affiche un message et on arrête tout
-            die('Erreur : ' . $e->getMessage());
-          }
+      <div class="chat">
+        <div class="chatzone">
+          <?php
+            try {
+              // Connection MySQL
+              $bdd = new PDO('mysql:host=localhost;dbname=test;charset=utf8', 'root', 'root');
+            } catch (Exception $e) {
+              // En cas d'erreur, on affiche un message et on arrête tout
+              die('Erreur : ' . $e->getMessage());
+            }
 
-          $reponse = $bdd->query('SELECT pseudo, message, DATE_FORMAT(date, \' | %d/%m/%Y | %H : %i : %s | \') AS date_form FROM minichat ORDER BY id') or die(print_r($bdd->errorInfo()));
-      
-          while ($donnees = $reponse->fetch()) {
-            echo '<div class="dateElt">' . $donnees['date_form'] . '</div>' . '<div class="messageElt">' . '<strong>' . $donnees['pseudo'] . '</strong>' . ' : ' . $donnees['message'] . '</div>' . '<br>';
-        }
-        ?>
+            $reponse = $bdd->query('SELECT pseudo, message, DATE_FORMAT(date, \' | %d/%m/%Y | %H : %i : %s | \') AS date_form FROM minichat ORDER BY id') or die(print_r($bdd->errorInfo()));
+        
+            while ($donnees = $reponse->fetch()) {
+              echo '<div class="dateElt">' . $donnees['date_form'] . '</div>' . '<div class="messageElt">' . '<strong>' . $donnees['pseudo'] . '</strong>' . ' : ' . $donnees['message'] . '</div>' . '<br>';
+          }
+          ?>
         </div>
+
         <div class="formzone">
-          <form  autocomplete="off" action="minichat_post.php" method="post">
-            
-              <input type="text" name="pseudo" id="pseudo" placeholder="Votre pseudo" value="<?php echo $_COOKIE['pseudo'];?>" required><?php ?>
-              <textarea class="materialize-textarea" name="message" id="message" placeholder="Votre message"></textarea>
-              <button id="submit" class="btn waves-effect waves-light right" type="submit" name="action">Send</button>
+          <form  id="chat_form" autocomplete="off" action="minichat_post.php" method="post">
+            <input type="text" name="pseudo" id="pseudo" placeholder="Votre pseudo" value="<?php echo $_COOKIE['pseudo'];?>" required><?php ?>
+            <textarea class="materialize-textarea" name="message" id="message" placeholder="Votre message"></textarea>
+            <button id="submit" class="btn waves-effect waves-light right" type="submit" name="action">Send</button>
           </form>
         </div>
-        </div>
-  </div>
+
+      </div>
+    </div>
 
  
   </div>
