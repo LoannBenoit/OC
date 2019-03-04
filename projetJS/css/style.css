@@ -1,105 +1,121 @@
-/* CSS classes for the tabs
-
----------------------------------
-
-.tabs {
-    background-color:#2F4858;
-}
-
-.tabs .tab a{
-    color: #abd4d1;
-}
-
-.tabs .tab a:hover {
-    color: #7FF9C1;
-    background-color: #abd4d138;
-}
-
-.tabs .tab a:focus.active {
-    color: #7FF9C1;
-    background-color: transparent;
-}
-
-.tabs .indicator {
-    background-color: #7FF9C1;
-} */
-
 html, body {
     width: 100%;
     height: 100%;
 }
 
-._slider {
-	width: auto;
+.first {
+	width: 100%;
 	height: 75%;
+}
+
+.slider {
+	width: 100%;
+	height: 100%;
 	position: relative;
 	overflow: hidden;
 }
-  
-	._slider:hover > 
-		._slider_next,
-		._slider_prev {
-		display: block;
-		}
 	
-	._next,
-	._prev {
-	  position: absolute;
-	  top: 35%;
-	  z-index: 999;
-	  display: none;
-	  width: auto;
-	  height: auto;
-	  padding: 2% 4%;
-	  background: #000;
-	  color: #fff;
-	  text-decoration: none;
-	  font-weight: 600;
-	  font-size: 2em;
-	  opacity: 0.8;
-	  cursor: pointer;
-	}
-	  
-	  ._next:hover,
-	._prev:hover {
-		opacity: 1;
-		-webkit-transition: all 0.2s ease;
-	  }
-	  
-  
-	._next {
-	  right: 0;
-	}
-
-
-	
-	ul {
-	  position: relative;
-	  width: 100%;
-	  height: 100%;
-	  margin: 0;
-	  padding: 0;
-	  list-style: none;
-	}
-	  
-	  li {
-		float: left;
-		margin: 0;
-		padding: 0;
-		position: relative;
-		background: #ccc;
-		display: block;
+.prev, .next {
+		position: absolute;
+		z-index: 999;
 		width: 100%;
 		height: 100%;
-		text-align: center;
-		overflow: hidden;
-	  }
+	  text-decoration: none;
+	  font-weight: 600;
+	  cursor: pointer;
+	}
 
-		.mtp1 {
-			width: 34%;
-			height: auto;
-			position: relative;
-			bottom: 37%;
-			}
-  
-  
+	/* .prev {
+		background: linear-gradient(to right, rgba(5, 5, 5, 0.473), transparent);
+	} */
+
+.next {
+	background: linear-gradient(to left, rgba(5, 5, 5, 0.473), transparent);
+}
+
+.arrows {
+	font-size: 3em;
+}
+	  
+.arrow_left, .arrow_right {
+	z-index: 999;
+	width: 28%;
+	height: 100%;
+	position: absolute;
+}
+
+.arrow_left {
+	background: linear-gradient(to right, rgba(5, 5, 5, 0.25), transparent);
+}
+
+.arrow_right {
+	background: linear-gradient(to left, rgba(5, 5, 5, 0.25), transparent);
+	right: 0%;
+}
+
+.next {
+	right: 0%;
+}
+
+.next:hover {
+	background: linear-gradient(to left, rgba(5, 5, 5, 0.699), transparent);
+}
+
+.prev:hover {
+	background: linear-gradient(to right, rgba(5, 5, 5, 0.699), transparent);
+}
+
+
+	
+ul {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+li {
+	float: left;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	overflow: hidden;
+}
+
+.mtp1 {
+	width: 34%;
+	height: auto;
+	position: relative;
+	bottom: 21%;
+}
+
+.mtp2 {
+	position: relative;
+	width: 34%;
+	bottom: 17%;
+}
+
+.mtp3 {
+	width: 34%;
+	position: relative;
+	bottom: 15%;
+}
+
+.second {
+	width: 100%;
+	height: 100%;
+	margin: 0%;
+	padding: 0%;
+}
+
+.map {
+	width: 100%;
+	height: 100%;
+	padding: 0%;
+}
