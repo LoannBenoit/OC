@@ -1,21 +1,20 @@
 html, body {
     width: 100%;
-    height: 100%;
-}
-
-	.row .col {
+		height: 100%;
 		margin: 0px;
 		padding: 0px;
-	}
+}
+
 
 
 .first {
 	width: 100%;
 	height: 75%;
 	margin: 0px;
+	overflow: hidden;
 }
 
-.slider {
+#slider {
 	width: 100%;
 	height: 100%;
 	position: relative;
@@ -33,20 +32,13 @@ html, body {
 	  cursor: pointer;
 	}
 
-	/* .prev {
-		background: linear-gradient(to right, rgba(5, 5, 5, 0.473), transparent);
-	} */
 
-.next {
-	background: linear-gradient(to left, rgba(5, 5, 5, 0.473), transparent);
-}
 
 .arrows {
 	font-size: 3em;
 }
 	  
 .arrow_left, .arrow_right {
-	z-index: 999;
 	width: 28%;
 	height: 100%;
 	position: absolute;
@@ -96,9 +88,8 @@ li {
 
 .mtp1 {
 	width: 100%;
-	height: auto;
 	position: relative;
-	bottom: 21%;
+	bottom: 17%;
 }
 
 .mtp2 {
@@ -115,15 +106,14 @@ li {
 
 .second {
 	width: 100%;
-	height: 100%;
+	height: 82%;
 	margin: 0%;
 	padding: 0%;
 }
 
-.map {
-	width: 100%;
-	height: 70%;
-	padding-left: 0%;
+#map {
+	height: 100%;
+	padding: 0px;
 }
 
 #detail {
@@ -131,6 +121,75 @@ li {
 	padding: 2%;
 }
 
+.second_zone {
+	position: relative;
+	background-color: #4e7694;
+	height: 100%;
+}
+
+.bike {
+	color: #78bced;
+}
+
 .input_field {
 	padding-left: 10px;
+}
+
+input[type=text]:not(.browser-default):not([readonly])+label, input[type=text]:not(.browser-default):not([readonly])::placeholder {
+	color: white;
+}
+
+input[type=text]:not(.browser-default):not([readonly]) {
+	border-bottom: 1px solid #78bced;
+	color: white;
+}
+
+input[type=text]:not(.browser-default):focus:not([readonly]) {
+	border-bottom: 1px solid #78bced;
+	box-shadow: 0 1px 0 0 #78bced;
+}
+
+input[type=text]:not(.browser-default):focus:not([readonly]) + label {
+	color: #78bced;
+}
+
+.input-field input[type=text]:focus + label {
+	color: #000;
+}
+
+#submit {
+	border-radius: 50px;
+	background: #78bced;
+	font-weight: bold;
+	display: block;
+}
+
+#submit:hover {
+	box-shadow: 0px 10px 22px #003358c4;
+}
+
+.time_text {
+	position: relative;
+	top: 10%;
+}
+
+
+
+
+
+
+.footer {
+	margin: 0px;
+}
+
+.page-footer {
+	background-color: #78bced;
+}
+
+.page-footer .footer-copyright{
+	background-color: #4e769473;
+}
+
+a {
+	color: #395c75;
 }

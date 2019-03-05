@@ -11,67 +11,98 @@
    
   <body>
     <div class="row first">
-    <div class="col s12 slider">
+    <div id="slider" class="col s12">
       <div class="arrow_left"><a href="#" class="prev"></a></div>
       <div class="arrow_right"><a href="#" class="next"></a></div>
       <ul>
-        <li><img class="mtp1 responsive-img" src="../images/montpellier1.jpg" alt="Montpellier 1"></li>
-        <li><img class="mtp2 responsive-img" src="../images/montpellier_velo.jpg" alt="Montpellier vélo"></li>
-        <li><img class="mtp3 responsive-img" src="../images/Velomagg.jpg" alt="Vélos de Montpellier"></li>
+        <li><img class="mtp1" src="../images/montpellier1.jpg" alt="Montpellier 1"></li>
+        <li><img class="mtp2" src="../images/montpellier_velo.jpg" alt="Montpellier vélo"></li>
+        <li><img class="mtp3" src="../images/Velomagg.jpg" alt="Vélos de Montpellier"></li>
       </ul>  
     </div>
   </div>
   
 
     <div class="row second">
-    <div class="col s12 m7 map">
+    <div id="map" class="col s12 m7">
         <iframe
         width="100%"
         height="100%"
         frameborder="0" style="border:0"
         src="https://api.mapbox.com/styles/v1/loannbenoit/cjsu9f4a8da1g1fs4bf9f5n32.html?fresh=true&title=true&access_token=pk.eyJ1IjoibG9hbm5iZW5vaXQiLCJhIjoiY2pzdTllOHF2MDBzazRibHRzbnd3M2x2aCJ9.hegWlJNinhN2D3NnGxjFtQ#12.0/48.866500/2.317600/0" allowfullscreen>
       </iframe> 
+    
     </div>
 
-    <div id="detail" class="col s12 m5">
-      <div class="row">
-        <div class="input-field col s12 m6">
-          <input type="text" name="station" class="station" required>
-          <label for="station">Nom de la station</label>
-        </div>
+    <div class="col s12 m5 second_zone ">
+      <form id="form" action="location.html">
+        <div id="detail" class="">
+          <div class="row">
+            <div class="input-field col s12 m6">
+              <input type="text" name="station" class="station" required>
+              <label for="station">Nom de la station</label>
+            </div>
 
-        <div class="input-field col s4 m4">
-          <i class="material-icons prefix">directions_bike</i>
-          <input name="bikes"type="text" class="bikes" disabled>
-          <label for="bikes">Vélos disponibles</label>
-        </div>
-      </div>
+            <div class="input-field col s4 m4">
+              <i class="material-icons prefix bike">directions_bike</i>
+              <input placeholder="Disponibles : "name="bikes"type="text" class="bikes" disabled>
+            </div>
+          </div>
 
-      <div class="row">
-        <div class="input-field col s12 m6">
-          <input type="text" class="name" name="name" required>
-          <label for="name">Nom</label>
-        </div>
+        <div class="row">
+          <div class="input-field col s12 m6">
+            <input type="text" class="name" name="name" required>
+            <label for="name">Nom</label>
+          </div>
 
-        <div class="input-field col s12 m6">
-          <input type="text" class="first_name" name="first_name" required>
-          <label for="first_name">Prénom</label>
+          <div class="input-field col s12 m6">
+            <input type="text" class="first_name" name="first_name" required>
+            <label for="first_name">Prénom</label>
+          </div>
         </div>
-      </div>
 
         <div class="row">
           <div class="button">
-        <button class="col s12 offset-m4 m4 btn-large waves-effect waves-light center" type="submit" name="action">Réserver
-            <i class="material-icons right">send</i>
-          </button>
+            <button id="submit" class="col s12 offset-m4 m4 btn-large waves-effect center" type="submit" name="action">Réserver</button>
+          </div>
         </div>
 
+        <div class="row">
+          <div class="time_text center">Vite ! Allez chercher vôtre vélo avant l'anulation de la réservation ! </div>
+        </div>
+
+        <div class="row">
+          <div class="time_left">
+              <div class="progress">
+                  <div id="progress_bar" class="determinate" style="width: 100%"></div>
+              </div>
+          </div>
         </div>
       
     </div>
+  </form>
+</div>
+
+</div>
+  <div class="row footer">
+      <footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">VÉL'OC</h5>
+                <p class="grey-text text-lighten-4">Ce site n'est pas un site officiel. Il s'agit d'un projet d'étudiant pour <a href="https://openclassrooms.com/fr">OpenClassrooms.</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+              © 2019 Loann BENOIT
+            </div>
+          </div>
+        </footer>
   </div>
-
-
+  
+  
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src='../materialize/js/materialize.min.js'></script>
     <script src="../js/location.js"></script>
