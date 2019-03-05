@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	/*	var interval;
+	/* var interval;
 		interval = setInterval(function () {
 		  moveRight();
 		}, 5000);
@@ -12,7 +12,7 @@ $(document).ready(function() {
 		  interval = setInterval(function () {
 			moveRight();
 			}, 5000);
-		}); */
+		});*/
 
 		$(document).keydown(function(e){
 				if (e.keyCode == 37) {
@@ -27,12 +27,6 @@ $(document).ready(function() {
 		var slideHeight = $('.slider ul li').height();
 		var sliderUlWidth = slideCount * slideWidth;
 		
-		$('.slider').css({ width: slideWidth, height: slideHeight });
-		
-		$('.slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
-		
-		// $('._slider ul li:last-child').prependTo('._slider ul');
-	
 		function moveLeft() {
 			$('.slider ul').animate({
 				left: + slideWidth

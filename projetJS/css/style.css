@@ -3,9 +3,16 @@ html, body {
     height: 100%;
 }
 
+	.row .col {
+		margin: 0px;
+		padding: 0px;
+	}
+
+
 .first {
 	width: 100%;
 	height: 75%;
+	margin: 0px;
 }
 
 .slider {
@@ -13,6 +20,7 @@ html, body {
 	height: 100%;
 	position: relative;
 	overflow: hidden;
+	padding: 0px;
 }
 	
 .prev, .next {
@@ -65,8 +73,6 @@ html, body {
 	background: linear-gradient(to right, rgba(5, 5, 5, 0.699), transparent);
 }
 
-
-	
 ul {
 	position: relative;
 	width: 100%;
@@ -89,7 +95,7 @@ li {
 }
 
 .mtp1 {
-	width: 34%;
+	width: 100%;
 	height: auto;
 	position: relative;
 	bottom: 21%;
@@ -97,12 +103,12 @@ li {
 
 .mtp2 {
 	position: relative;
-	width: 34%;
+	width: 100%;
 	bottom: 17%;
 }
 
 .mtp3 {
-	width: 34%;
+	width: 100%;
 	position: relative;
 	bottom: 15%;
 }
@@ -117,5 +123,14 @@ li {
 .map {
 	width: 100%;
 	height: 70%;
-	padding: 0%;
+	padding-left: 0%;
+}
+
+#detail {
+	margin-top: 15px 2%;
+	padding: 2%;
+}
+
+.input_field {
+	padding-left: 10px;
 }

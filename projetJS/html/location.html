@@ -33,38 +33,41 @@
       </iframe> 
     </div>
 
-    <div class="col s12 m5 detail">
+    <div id="detail" class="col s12 m5">
       <div class="row">
         <div class="input-field col s12 m6">
-          <input type="text" name="station" class="station">
+          <input type="text" name="station" class="station" required>
           <label for="station">Nom de la station</label>
         </div>
 
-        <div class="input-field col s3 m3">
+        <div class="input-field col s4 m4">
           <i class="material-icons prefix">directions_bike</i>
-          <input name="bikes"type="text" class="bikes">
+          <input name="bikes"type="text" class="bikes" disabled>
           <label for="bikes">Vélos disponibles</label>
         </div>
       </div>
 
       <div class="row">
         <div class="input-field col s12 m6">
-          <input type="text" class="name" name="name">
+          <input type="text" class="name" name="name" required>
           <label for="name">Nom</label>
         </div>
 
         <div class="input-field col s12 m6">
-          <input type="text" class="first_name" name="first_name">
+          <input type="text" class="first_name" name="first_name" required>
           <label for="first_name">Prénom</label>
         </div>
+      </div>
 
         <div class="row">
-        <button class="btn-large waves-effect waves-light center" type="submit" name="action">Réserver
+          <div class="button">
+        <button class="col s12 offset-m4 m4 btn-large waves-effect waves-light center" type="submit" name="action">Réserver
             <i class="material-icons right">send</i>
           </button>
+        </div>
 
         </div>
-      </div>
+      
     </div>
   </div>
 
