@@ -57,11 +57,13 @@ $(document).ready(function() {
 			return false;
 		});
 
-		var progressBar = $('#progress_bar');
-		var barWidth = $(progressBar.width());
-		if (barWidth < 500){
-			$('#progress_bar').css('background-color','#E89B25');
-		}
-
+		var progressBar = $('.determinate');
+		var barWidth = progressBar.width();
+		if (barWidth <= 500){
+			progressBar.css('background-color','orange');
+		}else {
+			progressBar.css('background-color','#62F1BD');
+		} ;
+	
 	});    
 	
