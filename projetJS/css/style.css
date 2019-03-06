@@ -184,10 +184,12 @@ input[type=text]:not(.browser-default):focus:not([readonly]) + label {
 
 .page-footer {
 	background-color: #78bced;
+	padding: 0px;
 }
 
 .page-footer .footer-copyright{
 	background-color: #4e769473;
+	
 }
 
 a {
