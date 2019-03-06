@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Mon Agence Statistics</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel = "stylesheet" href = "https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel = "stylesheet" href = "../materialize/css/materialize.min.css">
+  <link rel="stylesheet" href="../css/agence.css">
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  
+</head>
+<body>
+  <nav>
+    <div class="navBar nav-wrapper">
+      <a href="#" class="logoText brand-logo">Mon agence statistics</a>
+    </div>
+  </nav>
+
+<div class="row main">
+  <div id="menu" class="col m2">
+    <ul>
+      <li><p class="center-align"><a href="#test1">CR</a> </p></li>
+      <li><p class="center-align"><a href="#test2">Code Agence</a></p></li>
+      <li><p class="center-align">Page</p></li>
+      <li><p class="center-align drop"><a class="apps" href="#">Applications +</a></p></li>
+        <ul class="second-level">
+          <li>App 1</li>
+          <li>App 2</li>
+          <li>App 3</li>
+          <li>App 4</li>
+          <li>App 5</li>
+        </ul>
+      <li><p class="center-align">Période</p></li>
+      <li><p class="center-align">App les + vues</p></li>
+      <li><p class="center-align">App les - vues</p></li>
+    </ul>
+  </div>
+
+  <div id="content" class="col s12 m10">
+    <div id="tester"></div>
+      <div class="row">
+        <div class="col m4 dataForm">
+          <form action="agence.html">
+
+            <div class="row">
+              <div class="input-field col m4"><input id="semaines"placeholder="Ajouter une semaine" name="week" type="text" required></div>
+              <div class="input-field col m4"><input id="tablettes" placeholder="Nombre de tablettes" name="tablette" type="text" required></div>
+            </div>
+
+            <div class="row">
+              <div class="col m4"><button id="btn" class="btn waves-effect waves-light" type="submit" name="btn">Envoyer</button></div>
+            </div>
+
+          </form>
+        </div>
+      </div>
+  </div>
+</div>
+   
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src='../materialize/js/materialize.min.js'></script>
+  
+  <script src="../js/agence.js"></script>
+</body>
+</html>
