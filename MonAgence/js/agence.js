@@ -19,8 +19,6 @@ $(document).ready(function(){
     tablettes = $('#tablettes').val();
     console.log(semaine);
     console.log(tablettes);
-    
-    
     console.log(data);
   });
 
