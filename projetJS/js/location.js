@@ -34,20 +34,20 @@
 		
 		
 		$(document).ready(function() {
-	/*	var interval;
+	var interval;
 		interval = setInterval(function () {
 		  moveRight();
 		}, 5000);
 	  
-		$('.slider').mouseover(function(){
+		$('#slider').mouseover(function(){
 		  clearInterval(interval);
 		});
 		
-		$('.slider').mouseleave(function(){
+		$('#slider').mouseleave(function(){
 		  interval = setInterval(function () {
 			moveRight();
 			}, 5000);
-		}); */
+		}); 
 
 		$(document).keydown(function(e){
 				if (e.keyCode == 37) {

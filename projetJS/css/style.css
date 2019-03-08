@@ -1,3 +1,49 @@
+
+
+@media all and (min-width: 1275px) {
+	.first {
+		height: 90%;
+	}
+}
+
+@media all and (max-width: 1275px) {
+	.first {
+		height: 80%;
+	}
+}
+
+@media all and (max-width: 1024px) {
+	.first {
+		height: 68%;
+	}
+}
+
+@media all and (max-width: 970px) {
+	.first {
+		height: 59%;
+	}
+
+
+}
+
+@media all and (max-width: 770px) {
+	.first {
+		height: 47%
+	}
+}
+
+@media all and (max-width: 600px) {
+	.first {
+		height: 35%;
+	}
+}
+
+@media all and (min-width: 200px) and (max-width: 470px) {
+	.first {
+		height: 30%;
+	}
+}
+
 html, body {
     width: 100%;
 		height: 100%;
@@ -5,11 +51,8 @@ html, body {
 		padding: 0px;
 }
 
-
-
 .first {
 	width: 100%;
-	height: 75%;
 	margin: 0px;
 	overflow: hidden;
 }
@@ -86,33 +129,19 @@ li {
 	overflow: hidden;
 }
 
-.lyon1 {
+.lyon1, .lyon2, .lyon3 {
 	width: 100%;
-	position: relative;
-	bottom: 30%;
-}
-
-.lyon2 {
-	position: relative;
-	width: 100%;
-	bottom: 5%;
-}
-
-.lyon3 {
-	width: 100%;
-	position: relative;
-	bottom: 21%;
 }
 
 .second {
 	width: 100%;
-	height: 81%;
+	height: 100%;
 	margin: 0%;
 	padding: 0%;
 }
 
 #map {
-	height: 100%;
+	height: 81%;
 	padding: 0px;
 }
 
@@ -124,7 +153,7 @@ li {
 .second_zone {
 	position: relative;
 	background-color: #4e7694;
-	height: 100%;
+	height: 81%;
 }
 
 label {
@@ -133,7 +162,7 @@ label {
 
 
 .place, .bike, .done {
-	color: #78bced;
+	color: #00345E;
 	
 }
 
@@ -190,16 +219,20 @@ input[type=text]:not(.browser-default):focus:not([readonly]) + label {
 
 #timer {
 	padding-right: 5px;
-}
-
-.progress {
-	height: 5px;
-	margin: 0.7rem 0 1rem 0
+	color: #00345E;
 }
 
 .determinate {
 	background-color: #62F1BD;
 	width: 50%;
+}
+
+.third {
+	margin: 0px;
+}
+
+#page-footer {
+	padding: 0px;
 }
 
 .footer {
@@ -208,14 +241,12 @@ input[type=text]:not(.browser-default):focus:not([readonly]) + label {
 
 .page-footer {
 	background-color: #78bced;
-	padding: 0px;
 }
 
 .page-footer .footer-copyright{
 	background-color: #4e769473;
-	
 }
 
 a {
-	color: #395c75;
+	color: #00345E;
 }
