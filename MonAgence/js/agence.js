@@ -9,28 +9,14 @@ $(document).ready(function(){
       }
   });
 
-  var button = $('#btn');
-  var semaine;
-  var tablettes;
-
-  button.on('click', function(e){
-    e.preventDefault();
-    semaine = $('#semaines').val();
-    tablettes = $('#tablettes').val();
-    console.log(semaine);
-    console.log(tablettes);
-    console.log(data);
-  });
-
 });
-
 
 
 // Plotly part for statistics
 var data = [
     {
         x: ['S49', 'S50', 'S51'],
-        y: [157, 214, 116],
+        y: [200, 214, 116],
         type: 'bar'
     }
    
@@ -47,4 +33,4 @@ var layout = {
   }
 };
 
-Plotly.newPlot('tester', data, layout, {editable: true});
+Plotly.newPlot('tester', data, layout, {editable: false}); 

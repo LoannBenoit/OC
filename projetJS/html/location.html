@@ -37,19 +37,19 @@
         <form id="form" action="location.html">
           <div id="detail" class="">
             <div class="row">
-              <div class="input-field col s12 m6">
+              <div class="input-field col s12">
                 <i class="material-icons prefix place">place</i>
                 <input placeholder="Nom de la station :" type="text" name="station" id="station" required>
               </div>
             </div>
 
             <div class="row">
-              <div class="input-field col s12 m4">
+              <div class="input-field col s12 m6">
                 <i class="material-icons prefix bike">directions_bike</i>
                 <input placeholder="Places : "name="bikes" type="text" id="bikes" disabled>
               </div>
 
-              <div class="input-field col s12 offset-m2 m4">
+              <div class="input-field col s12 m6">
                 <i class="material-icons prefix done">done</i>
                 <input placeholder="Disponibles :" type="text" name="available" id="available" disabled>
               </div>
@@ -74,16 +74,23 @@
               </div>
             </div>
 
-            <div class="row">
-              <div class="time_text center"><h5>Vite ! Allez chercher vôtre vélo avant l'anulation de la réservation !</h5>  </div>
+            <div class="row canvas">
+              <div id="canvas" class="center-align">
+                <canvas id="signature"></canvas>
+              </div>
             </div>
 
-            <div class="row">
-              <div class="time_left">
-                  <i id="timer" class="material-icons">timer</i>
-                  <div class="progress">
-                    <div  class="determinate"></div>
-                  </div>
+            <div class="row time_zone">
+              <div class="time_text center"><h5>Vite ! Allez chercher vôtre vélo avant l'anulation de la réservation !</h5></div>
+            
+
+              <div class="row">
+                <div class="time_left">
+                    <i id="timer" class="material-icons">timer</i>
+                    <div class="progress">
+                      <div  class="determinate"></div>
+                    </div>
+                </div>
               </div>
             </div>
         
