@@ -1,42 +1,14 @@
-	// Map Google
-	var map;
-		function initMap() {
-			var myLatLng = {lat: 45.764043, lng: 4.835659};
-		  map = new google.maps.Map(document.getElementById('map'), {
-			center: myLatLng,
-			zoom: 14
-		  });
-	
-		}
 
-		ajaxGet('https://api.jcdecaux.com/vls/v1/stations?contract=Lyon&apiKey=c0b053aec47fb9e03232563717a89df9167ab593', function(reponse){
-			var stations = JSON.parse(reponse);
-			stations.forEach(function(station) {
-				var marker = new google.maps.Marker({
-					position: station.position,
-					map: map,
-					title: station.name
-				  });
-				  
-				  marker.addListener('click', function (e) {
-					var stationName = marker.title;
-					var nbPlaces = station.bike_stands;
-					var nbFree = station.available_bike_stands;
-					
-					document.getElementById('station').value = stationName;
-					document.getElementById('bikes').value = 'Places : ' + nbPlaces;
-					document.getElementById('available').value = 'Disponibles : ' + nbFree;
-				
-				});
-			});
-		});
 		
 
-	
-
-	
-		
 		$(document).ready(function() {
+
+			$(function() {
+				map.init();
+			});
+		
+
+
 
 	/* var interval;
 		interval = setInterval(function () {
@@ -53,7 +25,7 @@
 			}, 5000);
 		}); */
 
-		$(document).keydown(function(e){
+		/* $(document).keydown(function(e){
 				if (e.keyCode == 37) {
 					moveLeft();
 				} else if (e.keyCode == 39) {
@@ -94,7 +66,7 @@
 		$('.next').click(function () {
 			moveRight();
 			return false;
-		});
+		}); */
 
 
 	
@@ -107,7 +79,13 @@
 			progressBar.css('background-color','orange');
 		}else {
 			progressBar.css('background-color','#62F1BD');
-		} ;
+		}
+
+	/*	var canvas = $('#signature')[0];
+		if (canvas.getContext) {
+			var ctx = canvas.getContext('2d');
+		}
+		
 
 		$('#signature').mousedown(function(e){
             var mouseX = e.pageX - this.offsetLeft;
@@ -165,6 +143,5 @@
                 ctx.stroke();
             }
         }
-		
-	
+		*/
 	});

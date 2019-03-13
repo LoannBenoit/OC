@@ -28,9 +28,33 @@ var layout = {
   yaxis: {
       title: 'Tablettes',
   },
+
   xaxis: {
       title: 'Semaines',
-  }
+  },
 };
 
-Plotly.newPlot('tester', data, layout, {editable: false}); 
+var d3 = Plotly.d3;
+var img_jpg = d3.select('#jpg-export');
+var config = {
+    displayModeBar: true,
+
+    modeBarButtonsToAdd: [{
+        name: 'my icon',
+        icon: Plotly.Icons.camera,
+        ascent: 100,
+        transform: 'matrix(1 0 0 -1 0 100)',
+        click: function(gd) {
+            Plotly.toImage(gd, {height:500,width:500})
+            .then(
+                function(url) {
+                    img_jpg.attr('src', url);
+                    return Plotly.toImage(gd,{format:'jpeg', height:600, width:600})
+                }
+            )
+         }
+    }]
+    
+  };
+
+Plotly.newPlot('tester', data, layout, config); 
