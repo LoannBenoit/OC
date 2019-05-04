@@ -1,13 +1,13 @@
 
 @media all and (min-width: 1440px){
 	.first {
-		height: 77%;
+		height: 70%;
 	}
 }
 
 @media all and (min-width: 1200px) and (max-width: 1440px){
 	.first {
-		height: 62%;
+		height: 70%;
 	}
 }
 
@@ -140,7 +140,7 @@ li {
 }
 
 #map {
-	height: 87%;
+	height: 100%;
 	padding: 0px;
 }
 
@@ -151,8 +151,8 @@ li {
 
 .second_zone {
 	position: relative;
-	background-color: #4e7694;
-	height: 87%;
+	background-color: #394955;
+	height: 100%;
 }
 
 label {
@@ -161,12 +161,27 @@ label {
 
 
 .place, .bike, .done {
-	color: #00345E;
-	
+	color: #78bced;
 }
 
 .input_field {
 	padding-left: 10px;
+}
+
+#text-dispo {
+	position: absolute;
+	top: 12px;
+	left: 56px;
+	color: white;
+}
+
+#bikes {
+	width: 79%;
+}
+
+#available {
+	width: 55%;
+	padding-left: 93px;
 }
 
 input[type=text]:not(.browser-default):not([readonly])+label, input[type=text]:not(.browser-default):not([readonly])::placeholder {
@@ -191,11 +206,23 @@ input[type=text]:not(.browser-default):focus:not([readonly]) + label {
 	color: #000;
 }
 
-#submit {
+#name, #first_name {
+	pointer-events: none;
+}
+
+#submit, #cancel {
 	border-radius: 50px;
-	background: #78bced;
 	font-weight: bold;
-	display: block;
+}
+
+#submit {
+	visibility: hidden;
+	background: lightgrey;
+}
+
+#cancel {
+	display: none;
+	background: #78bced;
 }
 
 #submit:hover {
@@ -206,18 +233,41 @@ input[type=text]:not(.browser-default):focus:not([readonly]) + label {
 	transition: .1s ease-out;
 }
 
+.canvas {
+	display: flex;
+}
+
+#canvas {
+	position: relative;
+	margin: 0px auto;
+}
+
 #signature {
 	background-color: white;
+
 }
 
-.time_zone {
+#reset {
+	position: absolute;
+	top: 0px;
 	display: none;
 }
+#time_zone {
+	display: none;
+	margin: 0px;
+}
 
-.time_text {
+#time_zone .time_text {
+	padding: 0px;
+	font-size: 15px;
 	color: white;
 	position: relative;
+	
 	top: 10%;
+}
+
+#time_text, #counterMinutes, #timeSeparator, #counterSecondes {
+	font-size: 20px;
 }
 
 .time_left {
@@ -225,39 +275,16 @@ input[type=text]:not(.browser-default):focus:not([readonly]) + label {
 }
 
 #timer {
+	margin: 0px;
 	padding-right: 5px;
-	color: #00345E;
+	color: #78bced;
 }
 
 .progress {
+	width: 100%;
 	margin: .7rem 0 1rem 0;
 }
 
-.determinate {
-	background-color: #62F1BD;
-	width: 50%;
-}
-
-.third {
-	margin: 0px;
-}
-
-#page-footer {
-	padding: 0px;
-}
-
-.footer {
-	margin: 0px;
-}
-
-.page-footer {
-	background-color: #78bced;
-}
-
-.page-footer .footer-copyright{
-	background-color: #4e769473;
-}
-
-a {
-	color: #00345E;
+#determinate {
+	background-color: #26a69a;
 }

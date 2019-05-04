@@ -1,4 +1,4 @@
-$(document).ready(function(){
+
 
 
     // Define the width of a slide and the interval for autoplay
@@ -103,8 +103,6 @@ $(document).ready(function(){
     
 
     // Init the slider
-    $(function(){
-        slider.init();
-    })
 
-});
+
+
